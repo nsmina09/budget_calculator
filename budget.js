@@ -23,7 +23,7 @@ localStorage.setItem('balance', balance);
 
 
 //for more options in modal
-function myFunction() {
+function more() {
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("myBtn");
 
@@ -91,3 +91,4 @@ function logout() {
   localStorage.clear();
   window.location = 'index.html'
 }
+

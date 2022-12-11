@@ -58,35 +58,39 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5">
-              <form action="" id="typeOfTransaction">
-                <div id="radiodiv">
-                    <label for="credit">Credit</label>
-                <input id="credit" type="radio" value="credit" name="typeOfTransaction" >
-                <label for="debit">Debit</label>
-                <input id="debit" type="radio" value="debit" name="typeOfTransaction">
-                </div>
-                <input class="my-3 form-control border-success border-success" id="category" type="text"
-                    placeholder="Category">
-                <input class="form-control border-success" id="amount" type="text" placeholder="Amount">
-                <div id="amnt"></div>
-                <br>
-                <input class="my-3 form-control border-success" id="date" type="date" placeholder="Date">
-                <input class="form-control border-success" type="text" placeholder="Note" id="note">
-                <br>
-                <button id="myBtn" onclick="myFunction()" class="btn"><a
-                        class="text-decoration-none text-success my-3" href="#more"></a>Show More</button>
-                <br>
-                <div class="my-3" id="more">
-                    <div class="docdiv border border-1 border-success p-3 rounded my-3">
-                        <p>Drop file to attach
-                            <!-- <span class="text-success">Browse</span> -->
-                        </p>
-                        <input type="file" name="">
+                    <form action="" id="typeOfTransaction">
+                        <div id="radiodiv" class="mb-3">
+                            <label for="credit">Credit</label>
+                            <input id="credit" type="radio" value="credit" name="typeOfTransaction">
+                            <label for="debit">Debit</label>
+                            <input id="debit" type="radio" value="debit" name="typeOfTransaction">
+                        </div>
+                        <label for="">Category(required)</label>
+                        <input class="mb-3 form-control border-success border-success" id="category" type="text"
+                            placeholder="Category">
+                        <label for="">Amount (required)</label>
+                        <input class="form-control border-success" id="amount" type="text" placeholder="Amount">
+                        <br>
+                        <label for="">Date (required)</label>
+                        <input class="mb-3 form-control border-success" id="date" type="date" placeholder="Date">
+                        <label for="">Note </label>
+                        <input class="form-control border-success" type="text" placeholder="Note" id="note">
+                        <br>
+                        <button id="myBtn" onclick="myFunction()" class="btn"><a
+                                class="text-decoration-none text-success my-3" href="#more"></a>Show More</button>
+                        <br>
+                        <div id="erdiv"></div>
+                        <div class="my-3" id="more">
+                            <div class="docdiv border border-1 border-success p-3 rounded my-3">
+                                <p>Drop file to attach
+                                    <!-- <span class="text-success">Browse</span> -->
+                                </p>
+                                <input type="file" name="">
 
 
-                    </div>
-                </div>
-              </form>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -96,8 +100,8 @@
             </div>
         </div>
     </div>
-<br>
-<br>
+    <br>
+    <br>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track</title>
+    <link rel="stylesheet" href="./budget.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-success" href="#">Transactions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Last Month</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">This Month</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Future</a>
+                    </li>
+                </ul>
+                <!-- user in nav bar -->
+                <div class="text-success  me-auto" id="user"></div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Add Transaction
+                </button>
+                <button onclick="logout()" type="button" class="btn btn-outline-success mx-4">
+                    LogOut
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Transaction</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+              <form action="" id="typeOfTransaction">
+                <div id="radiodiv">
+                    <label for="credit">Credit</label>
+                <input id="credit" type="radio" value="credit" name="typeOfTransaction" >
+                <label for="debit">Debit</label>
+                <input id="debit" type="radio" value="debit" name="typeOfTransaction">
+                </div>
+                <input class="my-3 form-control border-success border-success" id="category" type="text"
+                    placeholder="Category">
+                <input class="form-control border-success" id="amount" type="text" placeholder="Amount">
+                <div id="amnt"></div>
+                <br>
+                <input class="my-3 form-control border-success" id="date" type="date" placeholder="Date">
+                <input class="form-control border-success" type="text" placeholder="Note" id="note">
+                <br>
+                <button id="myBtn" onclick="myFunction()" class="btn"><a
+                        class="text-decoration-none text-success my-3" href="#more"></a>Show More</button>
+                <br>
+                <div class="my-3" id="more">
+                    <div class="docdiv border border-1 border-success p-3 rounded my-3">
+                        <p>Drop file to attach
+                            <!-- <span class="text-success">Browse</span> -->
+                        </p>
+                        <input type="file" name="">
+
+
+                    </div>
+                </div>
+              </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button onclick="addTransaction(), selectRadioValue()" type="button" class="btn btn-outline-success"
+                        data-bs-dismiss="modal">Save </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="w-75 border-success border-1 my-3">
+                <thead>
+                    <tr>
+                        <th class="border border-success border-1">Date</th>
+                        <th class="border border-success border-1">Category</th>
+                        <th class="border border-success border-1">Amount</th>
+                        <th class="border border-success border-1">Current Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</body>
+
+<script src="budget.js"></script>
+
+
+</html>
